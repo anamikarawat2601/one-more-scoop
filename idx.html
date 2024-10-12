@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smallproject</title>
+</head>
+<body>
+    <div>
+        <h1>Can i have one more ice-cream</h1>
+        <button id="yesbtn" class="buttons">Yes</button>
+        <button id="nobtn" class="buttons">No</button>
+        
+    </div>
+    <script >
+        const yes=document.getElementById('yesbtn');
+        const no=document.getElementById('nobtn');
+        const container = document.querySelector("div");
+
+        no.addEventListener('click', () => {
+            if (container.firstChild === no) {
+                container.prepend(yes);
+            } else {
+                container.prepend(no);
+            }
+        });
+
+        yes.addEventListener('click',()=>{
+            window.location.href="thank.html";
+        })
+    </script>
+    
+    
+</body>
+</html>
